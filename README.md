@@ -1,19 +1,15 @@
 # MNIST Neural Network from Scratch
-
 A feedforward neural network built **entirely from scratch using only NumPy** — no PyTorch, no TensorFlow, no shortcuts. Trained on the classic MNIST handwritten digit dataset.
 
 ---
 
 ## Why I built this
-
-I'm self-taught and wanted to actually *understand* what happens inside a neural network — not just call `model.fit()` and hope for the best. So I sat down and implemented everything by hand: the layers, the activations, the loss function, and the backpropagation math.
-
+I'm self-taught and wanted to actually *understand* what happens inside a neural network.
 The data loading part was done with AI assistance (noted in the code), but the network architecture and training logic are mine.
 
 ---
 
 ## What it does
-
 - Loads the MNIST dataset (~70,000 handwritten digit images)
 - Trains a 3-layer neural network to classify digits 0–9
 - Runs for 500 epochs with mini-batch gradient descent
@@ -23,11 +19,9 @@ The data loading part was done with AI assistance (noted in the code), but the n
 ---
 
 ## Architecture
-
 ```
 Input (784)  →  Layer 1 (128, ReLU)  →  Layer 2 (64, ReLU)  →  Output (10, Softmax)
 ```
-
 - **Loss function:** Categorical Cross-Entropy
 - **Optimizer:** SGD (learning rate = 0.01)
 - **Batch size:** 128
@@ -70,7 +64,6 @@ The dataset downloads automatically from GitHub on first run.
 ---
 
 ## What I learned
-
 - How the **chain rule** actually flows backwards through a network
 - Why **softmax + cross-entropy** simplify cleanly when combined in backprop
 - The difference between the output layer delta and hidden layer deltas
@@ -80,9 +73,8 @@ The dataset downloads automatically from GitHub on first run.
 ---
 
 ## References
-
-- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) — Michael Nielsen *(dataset also sourced from here)*
-- [CS231n Notes](https://cs231n.github.io/) — backprop intuition
+- [Neural Networks forward pass and loss calculation](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3)
+- [3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — backprop intuition and calculations
 
 ---
 
